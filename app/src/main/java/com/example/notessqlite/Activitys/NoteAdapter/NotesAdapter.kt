@@ -13,11 +13,12 @@ import com.example.notessqlite.Activitys.UpdateActivity
 import com.example.notessqlite.R
 import com.example.notessqlite.databinding.NodeItemBinding
 
-class NotesAdapter(private var notes:List<Note>,val context: Context) : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
+class NotesAdapter(private var notes: List<Note>, private val context: Context) :
+    RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 
-    private val db:NotesDatabaseHolder = NotesDatabaseHolder(context)
+    private val db: NotesDatabaseHolder = NotesDatabaseHolder(context)
 
-    class NotesViewHolder(val binding :NodeItemBinding):RecyclerView.ViewHolder(binding.root)
+    class NotesViewHolder(val binding: NodeItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -35,28 +36,27 @@ class NotesAdapter(private var notes:List<Note>,val context: Context) : Recycler
         holder.binding.txtTitle.text = notes[position].title.toString()
         holder.binding.txtContent.text = notes[position].content.toString()
         holder.binding.updateButton.setOnClickListener {
-
-            val i = Intent(holder.itemView.context,UpdateActivity::class.java).apply {
-                putExtra("note_id",notes[position].id)
+            // Button Update
+            holder.binding.updateButton.setOnClickListener {
+                val i = Intent(holder.itemView.context, UpdateActivity::class.java).apply {
+                    putExtra("note_id", notes[position].id)
+                }
+                holder.itemView.context.startActivity(i)
             }
-            holder.itemView.context.startActivity(i)
-
-            holder.binding.deleteButton.setOnClickListener {
-
-                db.deleteNodes(notes[position].id)
-
-                refreshData(db.getAllNotes())
-                Toast.makeText(holder.itemView.context, "Note Delete", Toast.LENGTH_SHORT).show()
-                Log.e("Baraa","Note Delete")
-            }
-
+        }
+        //   Button Delete
+        holder.binding.deleteButton.setOnClickListener {
+            db.deleteNodes(notes[position].id)
+            refreshData(db.getAllNotes())
+            Toast.makeText(holder.itemView.context, "Note Deleted", Toast.LENGTH_SHORT).show()
+            Log.e("Baraa", "Note Deleted")
         }
     }
-// refresh All Data in Get All information
-    fun refreshData(newNotes:List<Note>){
 
-        notes = newNotes
-        notifyDataSetChanged()
+        // refresh All Data in Get All information
+        fun refreshData(newNotes: List<Note>) {
+
+            notes = newNotes
+            notifyDataSetChanged()
+        }
     }
-
-}

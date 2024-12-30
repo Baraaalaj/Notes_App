@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // inslization to class NotesDatabaseHolder
+        // initialization to class NotesDatabaseHolder
         db = NotesDatabaseHolder(this)
-        // inslization to Adapter
+        // initialization to Adapter
         noteAdapter = NotesAdapter(db.getAllNotes(), this)
 
         binding.noteRecyclerView.setHasFixedSize(true)
