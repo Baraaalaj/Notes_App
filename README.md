@@ -1,50 +1,63 @@
 # 📝 Note App
 
-تطبيق ملاحظات بسيط وفعّال تم تطويره باستخدام **Kotlin**. يتيح للمستخدمين إدارة ملاحظاتهم بسهولة من خلال واجهة استخدام سلسة وأداء سريع. يعتمد على **SQLite** لتخزين البيانات بشكل دائم، ويستخدم **SharedPreferences** لحفظ إعدادات المستخدم وتخصيص تجربة الاستخدام.
+A simple and efficient **Note-taking Android app** developed using **Kotlin**.  
+The app allows users to manage their notes easily through a smooth and responsive interface. It uses **SQLite** for persistent data storage and **SharedPreferences** to save user settings and customize the experience.
 
-## 📸 صور من التطبيق
+---
 
-أضف صور الواجهة هنا بعد رفعها إلى مجلد المشروع أو GitHub:
+## 📸 Screenshots
 
-![screenshot1](C:\Users\Public\Pictures\show all.png)  
-![screenshot2](C:\Users\Public\Pictures\title.png)
-![screenshot3](C:\Users\Public\Pictures\edit.png)
+After uploading the screenshots to the `screenshots` folder in your project or using direct links, you can display them as follows:
 
+![Home Screen](screenshots/show_all.png)  
+![Add Note](screenshots/title.png)  
+![Edit Note](screenshots/edit.png)
 
-> تأكد من إنشاء مجلد باسم `screenshots` داخل المشروع ووضع الصور فيه، أو استخدم روابط مباشرة للصور.
+> Make sure to create a folder named `screenshots` in your project and put your images there, or use direct URLs.
 
-## 🎯 الميزات
+---
 
-- 🆕 إضافة الملاحظات بسرعة وسهولة  
-- ✏️ تعديل الملاحظات في أي وقت  
-- 🗑️ حذف الملاحظات غير المرغوب بها  
-- 👀 عرض قائمة الملاحظات بشكل منظم  
-- 💾 تخزين البيانات محليًا باستخدام SQLite  
-- ⚙️ حفظ إعدادات المستخدم عبر SharedPreferences  
-- 🎨 واجهة استخدام بسيطة وسهلة التفاعل
+## 🎯 Features
 
-## ⚙️ التقنيات المستخدمة
+- 🆕 Quickly add new notes  
+- ✏️ Edit notes at any time  
+- 🗑️ Delete unwanted notes  
+- 👀 View all notes in a clean organized list  
+- 💾 Store notes locally using **SQLite**  
+- ⚙️ Save user settings using **SharedPreferences**  
+- 🎨 Simple and user-friendly interface  
 
-- **Kotlin** – اللغة الأساسية لبناء التطبيق  
-- **SQLite** – لتخزين الملاحظات بشكل دائم  
-- **SharedPreferences** – لحفظ إعدادات المستخدم
+---
 
-## 🚀 حالة المشروع
+## ⚙️ Tech Stack
 
-المشروع قيد التطوير، وسيتم إضافة ميزات مستقبلية مثل:
+- **Kotlin** – main development language  
+- **SQLite** – persistent local data storage  
+- **SharedPreferences** – save user settings  
 
-- 🔍 البحث داخل الملاحظات  
-- 🏷️ تصنيف الملاحظات حسب الأولوية أو النوع  
-- 🔐 حماية الملاحظات بكلمة مرور
+---
 
-## 📦 طريقة التشغيل
+## 🚀 Project Status
 
-1. افتح المشروع باستخدام Android Studio  
-2. تأكد من إعداد بيئة Kotlin بشكل صحيح  
-3. شغّل التطبيق على المحاكي أو جهاز Android حقيقي
+The project is under development, with future plans to add:
 
-## 🤝 المساهمة
+- 🔍 Search functionality within notes  
+- 🏷️ Categorize notes by priority or type  
+- 🔐 Protect notes with a password  
 
-إذا كنت مهتمًا بتطوير التطبيق أو إضافة ميزات جديدة، لا تتردد في فتح Pull Request أو إنشاء Issue.
+---
+
+## 📦 Getting Started
+
+1. Open the project in **Android Studio**  
+2. Ensure **Kotlin** is properly configured  
+3. Run the app on an emulator or a physical Android device  
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome!  
+If you want to improve the app or add new features, feel free to open a **Pull Request** or create an **Issue**.  
 
 ---
